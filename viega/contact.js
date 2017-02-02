@@ -3,15 +3,15 @@ $(function () {
     $('#contact-form').validator();
 
     $('#contact-form').on('submit', function (e) {
+
         if (!e.isDefaultPrevented()) {
             var url = "contact.php";
 
-            $.ajax({
+           $.ajax({
                 type: "POST",
                 url: url,
                 data: $(this).serialize(),
-                success: function (data)
-                {
+                success: function (data) {
                     var messageAlert = 'alert-' + data.type;
                     var messageText = data.message;
 
@@ -21,7 +21,17 @@ $(function () {
                         $('#contact-form')[0].reset();
                     }
                 }
-            });
+
+            })
+            		.done(function (data) {
+            		    $('#form-content').fadeOut('slow', function () {
+            		        $('#form-content').fadeIn('slow').html(data);
+            		    });
+            		})
+		.fail(function () {
+		    alert('Ajax Submit Failed ...');
+		});
+
             return false;
         }
     })
