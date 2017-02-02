@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="de" xml:lang="de" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+</head>
+<body style="margin:10px 5px;">
+
+    <div class="container">
+        <form id="contact-form" method="post" action="contact.php" role="form">
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="input01">Naam bedrijf:</label>
+                <div class="col-sm-10">
+                    <input type="text" placeholder="Naam bedrijf" id="input01" class="form-control">
+                    <small class="form-text text-muted help-block with-errors"></small>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="input02">Uw voornaam *:</label>
+                <div class="col-sm-10">
+                    <input type="text" required placeholder="Uw voornaam" id="input02" class="form-control">
+                    <small class="form-text text-muted help-block with-errors"></small>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="input04">Uw familienaam *:</label>
+                <div class="col-sm-10">
+                    <input type="text" required placeholder="Uw familienaam" id="input04" class="form-control">
+                    <small class="form-text text-muted help-block with-errors"></small>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="input04">Geslacht *:</label>
+                <div class="col-sm-10 form-inline">
+                    <div class="form-check mb-2 mr-sm-2 mb-sm-0">
+                        <label class="form-check-label">
+                            <input type="radio" required name="gridRadios" id="gridRadios1" value="Mr." checked class="form-control">Mr.
+                        </label>
+                    </div>
+                    <div class="form-check mb-2 mr-sm-2 mb-sm-0">
+                        <label class="form-check-label">
+                            <input type="radio" required name="gridRadios" id="gridRadios2" value="Mevr." class="form-control">Mevr.
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="input05">Straat en huisnummer *:</label>
+                <div class="col-sm-10">
+                    <input type="text" required placeholder="Straat en huisnummer" id="input05" class="form-control">
+                    <small class="form-text text-muted help-block with-errors"></small>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="input06">Postcode en Plaats *:</label>
+                <div class="col-sm-10">
+                    <input type="number" required onerror="" placeholder="Postcode en Plaats" id="input06" class="form-control">
+                    <small class="form-text text-muted help-block with-errors"></small>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="input07">Inschrijvingsnummer *:</label>
+                <div class="col-sm-10">
+                    <input type="number" required placeholder="Inschrijvingsnummer" id="input07" class="form-control">
+                    <small class="form-text text-muted help-block with-errors"></small>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="input08">Telefoonnummer *:</label>
+                <div class="col-sm-10">
+                    <input type="tel" required placeholder="Telefoonnummer" id="input08" class="form-control">
+                    <small class="form-text text-muted help-block with-errors"></small>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="input09">Faxnummer:</label>
+                <div class="col-sm-10">
+                    <input type="tel" placeholder="Faxnummer" id="input09" class="form-control">
+                    <small class="form-text text-muted help-block with-errors"></small>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="input10">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" required placeholder="Email" id="input10" class="form-control">
+                    <small class="form-text text-muted help-block with-errors"></small>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="input11">Website:</label>
+                <div class="col-sm-10">
+                    <input type="url" placeholder="Website" id="input11" class="form-control">
+                    <small class="form-text text-muted help-block with-errors"></small>
+                </div>
+            </div>
+            <fieldset class="form-group row">
+                <legend class="col-form-legend col-10">* verplicht in te vullen of aan te kruisen</legend>
+            </fieldset>
+            <div class="form-group row">
+                <div class="text-right">
+                    <button class="btn btn-primary btn-send" type="submit">Verzenden</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!--script src="validator.js"></!script-->
+    <script src="contact.js"></script>
+</body>
+</html>
